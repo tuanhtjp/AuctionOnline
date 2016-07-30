@@ -170,6 +170,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AccountInfoesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AccountsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AuctionsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AuctionStatusController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoriesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\RolesController.cs" />
     <Compile Include="Areas\Admin\Models\Account.cs">
       <DependentUpon>AuctionModel.tt</DependentUpon>
     </Compile>
@@ -242,6 +248,38 @@
     <Content Include="Areas\Admin\Models\AuctionModel.edmx.diagram">
       <DependentUpon>AuctionModel.edmx</DependentUpon>
     </Content>
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Accounts\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Accounts\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Accounts\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Accounts\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Accounts\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AccountInfoes\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\AccountInfoes\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\AccountInfoes\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\AccountInfoes\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\AccountInfoes\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Auctions\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Auctions\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Auctions\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Auctions\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Auctions\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AuctionStatus\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\AuctionStatus\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\AuctionStatus\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\AuctionStatus\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\AuctionStatus\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Categories\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Roles\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Roles\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Roles\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Roles\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Roles\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -254,7 +292,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -291,8 +331,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Controllers\" />
-    <Folder Include="Areas\Admin\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

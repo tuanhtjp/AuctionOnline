@@ -1,0 +1,51 @@
+﻿@model IEnumerable<AuctionOnline.Areas.Admin.Models.AuctionStatu>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BidPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BidTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Auction.ProductName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BidPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BidTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Auction.ProductName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ASID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ASID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ASID })
+        </td>
+    </tr>
+}
+
+</table>
